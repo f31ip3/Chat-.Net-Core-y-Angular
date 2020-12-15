@@ -1,0 +1,15 @@
+
+<input type="text" [formControl]="nameControl"/>
+<input #text type="text" [formControl]="textControl"/>
+
+<input type="button" (click)="SendMessag()" value="Enviar"/> <!--despues vamo0s a chat comonent a ligarlos-->
+
+
+  <!--las directivas se manadan llamar con *-->
+<!--para mandar llamar un componente agregamos el nombre de mi selector-->
+<app-message *ngFor="let elemento of lstMessages | async" [oMessage]="elemento">
+  <!--Para recivirlo ponemos [] igual a mi variable elemento-->
+
+</app-message>
+
+
